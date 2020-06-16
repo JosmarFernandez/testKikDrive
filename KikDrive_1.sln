@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoKikDrive", "ProyectoKikDrive\ProyectoKikDrive.csproj", "{BA57D9DD-9653-4DFA-A8D0-BD17218478E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KikDriveController", "KikDriveController\KikDriveController.csproj", "{F40A76D6-57DF-49A0-BA4C-77CBB4B48B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KikDriveServices", "KikDriveServices\KikDriveServices.csproj", "{B1975701-6DC5-4FE2-837A-C47F182799F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA57D9DD-9653-4DFA-A8D0-BD17218478E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA57D9DD-9653-4DFA-A8D0-BD17218478E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA57D9DD-9653-4DFA-A8D0-BD17218478E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA57D9DD-9653-4DFA-A8D0-BD17218478E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40A76D6-57DF-49A0-BA4C-77CBB4B48B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40A76D6-57DF-49A0-BA4C-77CBB4B48B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40A76D6-57DF-49A0-BA4C-77CBB4B48B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40A76D6-57DF-49A0-BA4C-77CBB4B48B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1975701-6DC5-4FE2-837A-C47F182799F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1975701-6DC5-4FE2-837A-C47F182799F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1975701-6DC5-4FE2-837A-C47F182799F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1975701-6DC5-4FE2-837A-C47F182799F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {795BBC33-723E-437B-ACD8-9CD2ADC4DA59}
+	EndGlobalSection
+EndGlobal

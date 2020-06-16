@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "KikDriveServices/1.0.0": {
+        "dependencies": {
+          "KikDriveController": "1.0.0"
+        },
+        "runtime": {
+          "KikDriveServices.dll": {}
+        }
+      },
+      "KikDriveController/1.0.0": {
+        "runtime": {
+          "KikDriveController.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KikDriveServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KikDriveController/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
