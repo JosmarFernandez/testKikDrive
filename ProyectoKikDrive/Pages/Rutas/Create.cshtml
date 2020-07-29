@@ -1,0 +1,58 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Rutas.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+    <div class="containercd">
+        <h1 class="text-center">Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+        <h1>Create</h1>
+
+        <h4>Rutas</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Rutas.Nombre" class="control-label"></label>
+                        <input asp-for="Rutas.Nombre" class="form-control" />
+                        <span asp-validation-for="Rutas.Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Rutas.Tramos" class="control-label"></label>
+                        <input asp-for="Rutas.Tramos" class="form-control" />
+                        <span asp-validation-for="Rutas.Tramos" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Rutas.CreatedAT" class="control-label"></label>
+                        <input asp-for="Rutas.CreatedAT" class="form-control" />
+                        <span asp-validation-for="Rutas.CreatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Rutas.UpdatedAT" class="control-label"></label>
+                        <input asp-for="Rutas.UpdatedAT" class="form-control" />
+                        <span asp-validation-for="Rutas.UpdatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Rutas.Status" /> @Html.DisplayNameFor(model => model.Rutas.Status)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-warning" />
+                        <a class="btn btn-warning" asp-page="Index">Regresar</a>
+                        <a class="btn btn-warning" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+            
+        
+        </div>
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

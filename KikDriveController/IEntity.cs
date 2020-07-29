@@ -6,8 +6,10 @@ namespace KikDriveController
 {
     public interface IEntity
     {
-        public string Usuario { get; set; }
-        public string Contraseña { get; set; }
+        public int Id { get; set; }
+        public bool Status { get; set; }
+        public DateTime CreatedAT { get; set; }
+        public DateTime? UpdatedAT { get; set; }
 
     }
 }

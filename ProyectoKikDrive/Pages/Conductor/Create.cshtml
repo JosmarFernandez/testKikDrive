@@ -1,0 +1,75 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Conductor.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+    <div class="containercd">
+        <h1 class="text-center">Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+
+        <h1>Registrar Conductor</h1>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Conductor.Nombre" class="control-label"></label>
+                        <input asp-for="Conductor.Nombre" class="form-control" />
+                        <span asp-validation-for="Conductor.Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Conductor.Apellido_Paterno" class="control-label"></label>
+                        <input asp-for="Conductor.Apellido_Paterno" class="form-control" />
+                        <span asp-validation-for="Conductor.Apellido_Paterno" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Conductor.Apellifo_Materno" class="control-label"></label>
+                        <input asp-for="Conductor.Apellifo_Materno" class="form-control" />
+                        <span asp-validation-for="Conductor.Apellifo_Materno" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Conductor.Tipo_liciencia" class="control-label"></label>
+                        <input asp-for="Conductor.Tipo_liciencia" class="form-control" />
+                        <span asp-validation-for="Conductor.Tipo_liciencia" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Conductor.Vehiculos" class="control-label"></label>
+                        <input asp-for="Conductor.Vehiculos" class="form-control" />
+                        <span asp-validation-for="Conductor.Vehiculos" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Conductor.VehiculoId" class="control-label"></label>
+                        <select asp-for="Conductor.VehiculoId" class="form-control" asp-items="ViewBag.VehiculoId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Conductor.CreatedAT" class="control-label"></label>
+                        <input asp-for="Conductor.CreatedAT" class="form-control" />
+                        <span asp-validation-for="Conductor.CreatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Conductor.UpdatedAT" class="control-label"></label>
+                        <input asp-for="Conductor.UpdatedAT" class="form-control" />
+                        <span asp-validation-for="Conductor.UpdatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Conductor.Status" /> @Html.DisplayNameFor(model => model.Conductor.Status)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-warning" />
+                        <a class="btn btn-warning" asp-page="Index">Regresar</a>
+                        <a class="btn btn-warning" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

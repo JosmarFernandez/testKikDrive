@@ -1,0 +1,56 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Login.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Login.Usuario" class="control-label"></label>
+                <input asp-for="Login.Usuario" class="form-control" />
+                <span asp-validation-for="Login.Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Login.Contraseña" class="control-label"></label>
+                <input asp-for="Login.Contraseña" class="form-control" />
+                <span asp-validation-for="Login.Contraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Login.SupervisorId" class="control-label"></label>
+                <select asp-for="Login.SupervisorId" class="form-control" asp-items="ViewBag.SupervisorId"></select>
+                <span asp-validation-for="Login.SupervisorId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Login.Id" />
+            <div class="form-group">
+                <label asp-for="Login.CreatedAT" class="control-label"></label>
+                <input asp-for="Login.CreatedAT" class="form-control" />
+                <span asp-validation-for="Login.CreatedAT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Login.UpdatedAT" class="control-label"></label>
+                <input asp-for="Login.UpdatedAT" class="form-control" />
+                <span asp-validation-for="Login.UpdatedAT" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Login.Status" /> @Html.DisplayNameFor(model => model.Login.Status)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-warning" />
+                <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+                <a class="btn btn-warning" asp-page="/Supervisor/Index">Supervisor</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,54 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Rutas.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+    <div class="container">
+
+
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+        <h1>Detalles de la Ruta</h1>
+
+        <div>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Rutas.Nombre)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Rutas.Nombre)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Rutas.Tramos)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Rutas.Tramos)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Rutas.CreatedAT)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Rutas.CreatedAT)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Rutas.UpdatedAT)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Rutas.UpdatedAT)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Rutas.Status)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Rutas.Status)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@Model.Rutas.Id">Editar</a>
+            <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+            <a class="btn btn-warning" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+        </div>
+        </div>

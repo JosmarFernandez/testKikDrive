@@ -1,0 +1,56 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Login.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+ 
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.Usuario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.Usuario)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.Contraseña)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.Contraseña)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.SupervisorA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.SupervisorA.Apellido_Materno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.CreatedAT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.CreatedAT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.UpdatedAT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.UpdatedAT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.Status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@Model.Login.Id">Editar</a>
+    <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+    <a class="btn btn-warning" asp-page="/Supervisor/Index">Supervisor</a>
+</div>

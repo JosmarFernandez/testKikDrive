@@ -2,8 +2,11 @@ C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveCo
 C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\bin\Debug\netcoreapp3.1\KikDriveController.dll
 C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\bin\Debug\netcoreapp3.1\KikDriveController.pdb
 C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\obj\Debug\netcoreapp3.1\KikDriveController.csprojAssemblyReference.cache
-C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\obj\Debug\netcoreapp3.1\KikDriveController.csproj.CoreCompileInputs.cache
 C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\obj\Debug\netcoreapp3.1\KikDriveController.AssemblyInfoInputs.cache
 C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\obj\Debug\netcoreapp3.1\KikDriveController.AssemblyInfo.cs
 C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\obj\Debug\netcoreapp3.1\KikDriveController.dll
 C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\obj\Debug\netcoreapp3.1\KikDriveController.pdb
+C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\bin\Debug\netcoreapp3.1\KikDriveController.runtimeconfig.json
+C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\bin\Debug\netcoreapp3.1\KikDriveController.runtimeconfig.dev.json
+C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\obj\Debug\netcoreapp3.1\KikDriveController.genruntimeconfig.cache
+C:\Users\DABES_JOSMAR\Documents\Visual Studio 2019\Projets\KikDrive_1\KikDriveController\obj\Debug\netcoreapp3.1\KikDriveController.csproj.CoreCompileInputs.cache

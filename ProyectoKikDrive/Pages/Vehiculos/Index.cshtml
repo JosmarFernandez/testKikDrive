@@ -1,0 +1,79 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Vehiculos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class="container">
+
+
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+
+        <h1>Panel de Vehiculos</h1>
+
+        <p>
+            <a asp-page="Create">Registrar Vehiculo</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vehiculo[0].Placa)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vehiculo[0].Marca)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vehiculo[0].Modelo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vehiculo[0].Dimensiones)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vehiculo[0].Capacidad)
+                    </th>                 
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vehiculo[0].Status)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Vehiculo)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Placa)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Marca)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Modelo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dimensiones)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Capacidad)
+                        </td>                    
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            <div class="containerCard">
+                                <a  class="btn btn-warning button" asp-page="./Edit" asp-route-id="@item.Id">Editar</a>
+                                <a  class="btn btn-warning button" asp-page="./Details" asp-route-id="@item.Id">Detalles</a>
+                                <a  class="btn btn-warning button" asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
+                                </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="containerCard">
+            <a class="btn btn-warning button" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+        </div>
+    </div>

@@ -1,0 +1,77 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Supervision.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <div class="container">
+
+
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+        <h1>Eliminar Supervisión</h1>
+
+        <h3>¿Estas seguro que quieres eliminar esta Supervisión?</h3>
+        <div>
+            <h4>Supervision</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Supervision.Paradas)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Supervision.Paradas)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Supervision.Rutas)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Supervision.Rutas)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Supervision.Vehiculo)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Supervision.Vehiculo)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Supervision.Conductor)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Supervision.Conductor)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Supervision.SupervisorA)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Supervision.SupervisorA.Apellido_Materno)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Supervision.CreatedAT)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Supervision.CreatedAT)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Supervision.UpdatedAT)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Supervision.UpdatedAT)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Supervision.Status)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Supervision.Status)
+                </dd>
+            </dl>
+
+            <form method="post">
+                <input type="hidden" asp-for="Supervision.Id" />
+                <input type="submit" value="Delete" class="btn btn-warning" />
+                <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+                <a class="btn btn-warning" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+            </form>
+        </div>
+           </div>

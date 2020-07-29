@@ -1,0 +1,75 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Supervisor.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+    <div class="container">
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+
+        <h1>Editar Supervisores</h1>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="SupervisorA.Nombre" class="control-label"></label>
+                        <input asp-for="SupervisorA.Nombre" class="form-control" />
+                        <span asp-validation-for="SupervisorA.Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SupervisorA.Apellido_Paterno" class="control-label"></label>
+                        <input asp-for="SupervisorA.Apellido_Paterno" class="form-control" />
+                        <span asp-validation-for="SupervisorA.Apellido_Paterno" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SupervisorA.Apellido_Materno" class="control-label"></label>
+                        <input asp-for="SupervisorA.Apellido_Materno" class="form-control" />
+                        <span asp-validation-for="SupervisorA.Apellido_Materno" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SupervisorA.Usuario" class="control-label"></label>
+                        <input asp-for="SupervisorA.Usuario" class="form-control" />
+                        <span asp-validation-for="SupervisorA.Usuario" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SupervisorA.Contraseña" class="control-label"></label>
+                        <input asp-for="SupervisorA.Contraseña" class="form-control" />
+                        <span asp-validation-for="SupervisorA.Contraseña" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SupervisorA.Telefono" class="control-label"></label>
+                        <input asp-for="SupervisorA.Telefono" class="form-control" />
+                        <span asp-validation-for="SupervisorA.Telefono" class="text-danger"></span>
+                    </div>
+                    <input type="hidden" asp-for="SupervisorA.Id" />
+                    <div class="form-group">
+                        <label asp-for="SupervisorA.CreatedAT" class="control-label"></label>
+                        <input asp-for="SupervisorA.CreatedAT" class="form-control" />
+                        <span asp-validation-for="SupervisorA.CreatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SupervisorA.UpdatedAT" class="control-label"></label>
+                        <input asp-for="SupervisorA.UpdatedAT" class="form-control" />
+                        <span asp-validation-for="SupervisorA.UpdatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="SupervisorA.Status" /> @Html.DisplayNameFor(model => model.SupervisorA.Status)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-warning" />
+                        <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+                        <a class="btn btn-warning" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>      
+    </div>
+   
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

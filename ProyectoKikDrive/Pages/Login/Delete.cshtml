@@ -1,0 +1,56 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Login.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div>
+    <h4>Login</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.Usuario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.Usuario)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.Contraseña)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.Contraseña)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.SupervisorA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.SupervisorA.Apellido_Materno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.CreatedAT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.CreatedAT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.UpdatedAT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.UpdatedAT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Login.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Login.Status)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Login.Id" />
+        <input type="submit" value="Delete" class="btn btn-warning" />
+        <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+        <a class="btn btn-warning" asp-page="/Supervisor/Index">Supervisor</a>
+    </form>
+</div>

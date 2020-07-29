@@ -1,0 +1,53 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Tablas.SupervisorVerModel
+@{
+}
+
+    <div class="container">
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+        <h5 class="text-center">Panel de Supervisores</h5>
+        <div class="containerCard">
+            <div class="containercd">
+                @if (Model.Supervisors.Any())
+                {
+
+                    <table class="table table-info">
+                        <!--Head-->
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">@Html.DisplayNameFor(x => x.Supervisors.FirstOrDefault().Id)</th>
+                                <th scope="col">@Html.DisplayNameFor(x => x.Supervisors.FirstOrDefault().Nombre)</th>
+                                <th scope="col">@Html.DisplayNameFor(x => x.Supervisors.FirstOrDefault().Apellido_Paterno)</th>
+                                <th scope="col">@Html.DisplayNameFor(x => x.Supervisors.FirstOrDefault().Apellido_Materno)</th>
+                                <th scope="col">@Html.DisplayNameFor(x => x.Supervisors.FirstOrDefault().Telefono)</th>
+                                <th scope="col">@Html.DisplayNameFor(x => x.Supervisors.FirstOrDefault().Usuario)</th>
+                                <th scope="col">@Html.DisplayNameFor(x => x.Supervisors.FirstOrDefault().Contraseña)</th>
+                            </tr>
+                        </thead>
+                        <!--Body-->
+                        <tbody>
+                            @foreach (var item in Model.Supervisors)
+                            {
+                            <tr>
+                                <td scope="row">@Html.DisplayFor(m => item.Id)</td>
+                                <td>@Html.DisplayFor(m => item.Nombre)</td>
+                                <td>@Html.DisplayFor(m => item.Apellido_Paterno)</td>
+                                <td>@Html.DisplayFor(m => item.Apellido_Materno)</td>
+                                <td>@Html.DisplayFor(m => item.Telefono)</td>
+                                <td>@Html.DisplayFor(m => item.Usuario)</td>
+                                <td>@Html.DisplayFor(m => item.Contraseña)</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="mx-auto text-center">
+                        <span class="text-danger">No se Encrotraron Supervisores</span>
+                    </div>
+                }
+                </div>
+</div>
+</div>

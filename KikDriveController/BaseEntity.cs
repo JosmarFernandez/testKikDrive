@@ -4,7 +4,9 @@ namespace KikDriveController
 {
     public class BaseEntity :IEntity
     {
-        public string Usuario { get; set; }
-        public string Contraseña { get; set; }
+        public int Id { get; set; }
+        public DateTime CreatedAT { get; set; } = DateTime.Now;
+        public DateTime? UpdatedAT { get; set; }
+        public bool Status { get; set; } = true;
     }
 }

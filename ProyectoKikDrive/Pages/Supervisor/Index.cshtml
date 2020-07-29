@@ -1,0 +1,89 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Supervisor.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+    <div class="container">
+
+
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+
+        <h1>Panel de Supervisores</h1>
+        <p>
+            <a asp-page="Create">Registrar Supervisor</a>
+
+        </p>
+        <p>
+            <a asp-page="/Login/Index">Registrar Usuario</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SupervisorA[0].Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SupervisorA[0].Apellido_Paterno)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SupervisorA[0].Apellido_Materno)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SupervisorA[0].Usuario)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SupervisorA[0].Contraseña)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SupervisorA[0].Telefono)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SupervisorA[0].Status)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.SupervisorA)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Apellido_Paterno)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Apellido_Materno)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Usuario)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contraseña)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefono)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            <div class="containerCard">
+                                <a class="btn btn-warning button" asp-page="./Edit" asp-route-id="@item.Id">Editar</a>
+                                <a class="btn btn-warning button" asp-page="./Details" asp-route-id="@item.Id">Detalles</a>
+                                <a class="btn btn-warning button" asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="containerCard">
+            <a class="btn btn-warning button" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+        </div>
+    </div>
+    

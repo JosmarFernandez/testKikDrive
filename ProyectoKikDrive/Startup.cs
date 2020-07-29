@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using KikDriveController;
+using KikDriveServices;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 
 namespace ProyectoKikDrive
 {
@@ -23,7 +27,24 @@ namespace ProyectoKikDrive
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<AppBDContext>(option => {
+                option.UseSqlServer(Configuration.GetConnectionString("EFDbConnection"));
+            });
+
+
+
             services.AddRazorPages();
+            services.AddScoped<AppBDContext>();
+            services.AddScoped(typeof(IRepository<>), typeof(SQLRepository<>));
+            services.AddScoped<IContainerRepository, ContainerRepository>();
+            
+
+            services.AddRouting(option => {
+                option.LowercaseUrls = true;
+                option.LowercaseQueryStrings = true;
+                option.AppendTrailingSlash = true;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,75 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Paradas.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class="container">
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+
+        <h1>Panel de Paradas</h1>
+
+
+        <p>
+            <a asp-page="Create">Registra la parada</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Paradas[0].Incidentes)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Paradas[0].Tipo_incidente)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Paradas[0].Fecha)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Paradas[0].Rutas)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Paradas[0].Status)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Paradas)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Incidentes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tipo_incidente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedAT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rutas.Nombre)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            <div class=" containerCard">
+                                <a class="btn btn-warning button" asp-page="./Edit" asp-route-id="@item.Id">Editar</a>
+                                <a class="btn btn-warning button" asp-page="./Details" asp-route-id="@item.Id">Detalles</a>
+                                <a class="btn btn-warning button" asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class=" containerCard">
+            <a class="btn btn-warning button" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+        </div>
+    </div>
+  

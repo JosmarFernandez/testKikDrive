@@ -1,0 +1,76 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Paradas.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+    <div class="container">
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+
+        <h1>Eliminar Paradas</h1>
+
+
+        <h3>¿Estas Seguro que quieres eliminar esta Parada?</h3>
+        <div>
+            <h4>Paradas</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Paradas.Incidentes)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Paradas.Incidentes)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Paradas.Tipo_incidente)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Paradas.Tipo_incidente)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Paradas.Fecha)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Paradas.Fecha)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Paradas.Hora)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Paradas.Hora)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Paradas.Rutas)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Paradas.Rutas.Nombre)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Paradas.CreatedAT)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Paradas.CreatedAT)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Paradas.UpdatedAT)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Paradas.UpdatedAT)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Paradas.Status)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Paradas.Status)
+                </dd>
+            </dl>
+
+            <form method="post">
+                <input type="hidden" asp-for="Paradas.Id" />
+                <input type="submit" value="Delete" class="btn btn-warning" />
+                <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+                <a class="btn btn-warning button" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+            </form>
+        </div>      
+    </div>

@@ -1,0 +1,75 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Supervision.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+    <div class="container">
+
+
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+
+        <h1>Editar Supervisión</h1>   
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Supervision.Paradas" class="control-label"></label>
+                        <input asp-for="Supervision.Paradas" class="form-control" />
+                        <span asp-validation-for="Supervision.Paradas" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Supervision.Rutas" class="control-label"></label>
+                        <input asp-for="Supervision.Rutas" class="form-control" />
+                        <span asp-validation-for="Supervision.Rutas" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Supervision.Vehiculo" class="control-label"></label>
+                        <input asp-for="Supervision.Vehiculo" class="form-control" />
+                        <span asp-validation-for="Supervision.Vehiculo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Supervision.Conductor" class="control-label"></label>
+                        <input asp-for="Supervision.Conductor" class="form-control" />
+                        <span asp-validation-for="Supervision.Conductor" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Supervision.SupervisorId" class="control-label"></label>
+                        <select asp-for="Supervision.SupervisorId" class="form-control" asp-items="ViewBag.SupervisorId"></select>
+                        <span asp-validation-for="Supervision.SupervisorId" class="text-danger"></span>
+                    </div>
+                    <input type="hidden" asp-for="Supervision.Id" />
+                    <div class="form-group">
+                        <label asp-for="Supervision.CreatedAT" class="control-label"></label>
+                        <input asp-for="Supervision.CreatedAT" class="form-control" />
+                        <span asp-validation-for="Supervision.CreatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Supervision.UpdatedAT" class="control-label"></label>
+                        <input asp-for="Supervision.UpdatedAT" class="form-control" />
+                        <span asp-validation-for="Supervision.UpdatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Supervision.Status" /> @Html.DisplayNameFor(model => model.Supervision.Status)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-warning" />
+                        <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+                        <a class="btn btn-warning" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+            
+        </div>
+        
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

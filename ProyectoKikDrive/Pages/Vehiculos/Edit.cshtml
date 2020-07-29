@@ -1,0 +1,72 @@
+﻿@page
+@model ProyectoKikDrive.Pages.Vehiculos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+    <div class="container">
+
+
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+        <h1>Editar Vehiculo</h1>
+
+        
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Vehiculo.Placa" class="control-label"></label>
+                        <input asp-for="Vehiculo.Placa" class="form-control" />
+                        <span asp-validation-for="Vehiculo.Placa" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vehiculo.Marca" class="control-label"></label>
+                        <input asp-for="Vehiculo.Marca" class="form-control" />
+                        <span asp-validation-for="Vehiculo.Marca" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vehiculo.Modelo" class="control-label"></label>
+                        <input asp-for="Vehiculo.Modelo" class="form-control" />
+                        <span asp-validation-for="Vehiculo.Modelo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vehiculo.Dimensiones" class="control-label"></label>
+                        <input asp-for="Vehiculo.Dimensiones" class="form-control" />
+                        <span asp-validation-for="Vehiculo.Dimensiones" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vehiculo.Capacidad" class="control-label"></label>
+                        <input asp-for="Vehiculo.Capacidad" class="form-control" />
+                        <span asp-validation-for="Vehiculo.Capacidad" class="text-danger"></span>
+                    </div>
+                    <input type="hidden" asp-for="Vehiculo.Id" />
+                    <div class="form-group">
+                        <label asp-for="Vehiculo.CreatedAT" class="control-label"></label>
+                        <input asp-for="Vehiculo.CreatedAT" class="form-control" />
+                        <span asp-validation-for="Vehiculo.CreatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vehiculo.UpdatedAT" class="control-label"></label>
+                        <input asp-for="Vehiculo.UpdatedAT" class="form-control" />
+                        <span asp-validation-for="Vehiculo.UpdatedAT" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Vehiculo.Status" /> @Html.DisplayNameFor(model => model.Vehiculo.Status)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-warning" />
+                        <a class="btn btn-warning" asp-page="./Index">Regresar</a>
+                        <a class="btn btn-warning" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        </div>
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
