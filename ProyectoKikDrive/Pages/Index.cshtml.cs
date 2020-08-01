@@ -7,30 +7,64 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using KikDriveServices;
 using KikDriveController;
+using Microsoft.AspNetCore.Http;
 
 namespace ProyectoKikDrive.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly IRepository<KikDriveController.Login> repository;
-        public IndexModel(IRepository<KikDriveController.Login> repository)
+        public string Msg;
+
+        private readonly ILogger<IndexModel> _logger;
+        AppBDContext AppBD;
+        [BindProperty]
+        public KikDriveController.Login Login { get; set; }
+        public string Usuario { get; set; }
+        public object BCrypt { get; private set; }
+        public object Net { get; private set; }
+
+        public IndexModel(ILogger<IndexModel> logger, AppBDContext appBD)
         {
-            this.repository = repository;
+            _logger = logger;
+            AppBD = appBD;
         }
 
-        public IEnumerable<KikDriveController.Login> Login { get; private set; }
-
-        public IActionResult OnGet()
+        public void OnGet()
         {
-            try
+            Login = new KikDriveController.Login();
+        }
+
+        public IActionResult OnPost()
+        {
+            var _loggin = login(Login.Usuario, Login.Contraseña);
+            if(_loggin == null)
             {
-                Login = repository.GetAll();
-                return Page();
+                return RedirectToPage("Eror de inicio");
             }
-            catch (Exception)
+            else
             {
-                return RedirectToPage($"/NotFount");
+                HttpContext.Session.SetString("Nombre", _loggin.Usuario);
+                return RedirectToPage("IniciarSesion", _loggin.Contraseña);
             }
+        }      
+        private KikDriveController.Login login(string usuario, string contraseña)
+        {
+            var login = AppBD.Logins.SingleOrDefault(a => a.Usuario.Equals(usuario));
+            if( login != null)
+            {
+                if(BCrypt.Net.BCrypt.Verify(contraseña, login.Contraseña))
+                {
+                    return login;
+                }
+                return null;            
+            }
+        }
+
+
+        public IActionResult OnGetLogout()
+        {
+            HttpContext.Session.Remove("Nombre");
+            return RedirectToPage("Index");
         }
     }
 }

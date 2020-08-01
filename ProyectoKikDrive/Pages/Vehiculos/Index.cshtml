@@ -10,7 +10,9 @@
 
         <h1>Kik Drive</h1>
         <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
-
+        <div class="card container" style="width: 18rem;">
+            <img class="card-img-top" src="~/IMG/Vehiculo.png" alt="Card image cap" />
+        </div>
         <h1>Panel de Vehiculos</h1>
 
         <p>
@@ -33,7 +35,7 @@
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Vehiculo[0].Capacidad)
-                    </th>                 
+                    </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Vehiculo[0].Status)
                     </th>
@@ -58,16 +60,16 @@
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Capacidad)
-                        </td>                    
+                        </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Status)
                         </td>
                         <td>
                             <div class="containerCard">
-                                <a  class="btn btn-warning button" asp-page="./Edit" asp-route-id="@item.Id">Editar</a>
-                                <a  class="btn btn-warning button" asp-page="./Details" asp-route-id="@item.Id">Detalles</a>
-                                <a  class="btn btn-warning button" asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
-                                </div>
+                                <a class="btn btn-warning button" asp-page="./Edit" asp-route-id="@item.Id">Editar</a>
+                                <a class="btn btn-warning button" asp-page="./Details" asp-route-id="@item.Id">Detalles</a>
+                                <a class="btn btn-warning button" asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
+                            </div>
                         </td>
                     </tr>
                 }

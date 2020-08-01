@@ -10,7 +10,7 @@ namespace KikDriveController
     {
         [DisplayName("Placa:")]
         [Required(ErrorMessage = "La Placa es Requerido")]
-        public char Placa { get; set; }
+        public string Placa { get; set; }
         [DisplayName("Marca:")]
         [Required(ErrorMessage = "La Marca es Requerido")]
         public string Marca { get; set; }

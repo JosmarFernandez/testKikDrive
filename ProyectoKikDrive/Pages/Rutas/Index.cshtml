@@ -4,64 +4,66 @@
 @{
     ViewData["Title"] = "Index";
 }
-<div class="container">
+    <div class="container">
 
 
-    <h1>Kik Drive</h1>
-    <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+        <h1>Kik Drive</h1>
+        <h4 class="text-center">Kik Drive Mejorando el Gestionamineto</h4>
+        <div class="card container" style="width: 18rem;">
+            <img class="card-img-top" src="~/IMG/Ruta.jpg" alt="Card image cap" />
+        </div>
+        <h1>Panel de Rutas</h1>
 
-    <h1>Panel de Rutas</h1>
-    
 
-    <p>
-        <a asp-page="Create">Registrar Rutas</a>
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Rutas[0].Nombre)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Rutas[0].Tramos)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Rutas[0].CreatedAT)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Rutas[0].Status)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Rutas)
-            {
+        <p>
+            <a asp-page="Create">Registrar Rutas</a>
+        </p>
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nombre)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Tramos)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CreatedAT)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Status)
-                    </td>
-                    <td>
-                        <div class="containerCard">
-                            <a class="btn btn-warning button" asp-page="./Edit" asp-route-id="@item.Id">Editar</a> 
-                            <a class="btn btn-warning button" asp-page="./Details" asp-route-id="@item.Id">Detalles</a>
-                            <a class="btn btn-warning button" asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
-                        </div>
-                    </td>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rutas[0].Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rutas[0].Tramos)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rutas[0].CreatedAT)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rutas[0].Status)
+                    </th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
-    <div class=" containerCard">
-        <a class="btn btn-warning button" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Rutas)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tramos)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedAT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            <div class="containerCard">
+                                <a class="btn btn-warning button" asp-page="./Edit" asp-route-id="@item.Id">Editar</a>
+                                <a class="btn btn-warning button" asp-page="./Details" asp-route-id="@item.Id">Detalles</a>
+                                <a class="btn btn-warning button" asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class=" containerCard">
+            <a class="btn btn-warning button" asp-page="/CRUDs/SeccionPrincipal">Home</a>
+        </div>
     </div>
-</div>
